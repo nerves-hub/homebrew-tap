@@ -19,6 +19,6 @@ jobs:
 
           git config --global user.name 'Josh Kalderimis'
           git config --global user.email 'josh.kalderimis@gmail.com'
-          git add Formula/cli.rb
+          git add Formula/nh.rb
           git commit -m 'Updated cli to ${{ github.event.inputs.version }}'
           git push origin master

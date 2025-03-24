@@ -1,4 +1,4 @@
-class Cli < Formula
+class Nh < Formula
   desc "Command-line interface for the NervesHub platform"
   homepage "https://github.com/nerves-hub/nerves_hub_cli"
 

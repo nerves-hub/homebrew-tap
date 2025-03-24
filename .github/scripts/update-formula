@@ -17,20 +17,20 @@ MACOS_AARCH64_SHASUM=$(curl -sL "${BASE}/macos-aarch64.tar.xz" | shasum -a 256 |
 LINUX_X86_64_SHASUM=$(curl -sL "${BASE}/linux-x86_64.tar.xz" | shasum -a 256 | awk '{ print $1 }')
 LINUX_AARCH64_SHASUM=$(curl -sL "${BASE}/linux-aarch64.tar.xz" | shasum -a 256 | awk '{ print $1 }')
 
-# This writes a new version of the Formula/cli.rb file using the
+# This writes a new version of the Formula/nh.rb file using the
 # VERSION number and SHASUM we set above.
 #
 # `cat <<EOF` prints a string with the formula (i.e. the entire
-# `Cli` class definition down to the second `EOF` line). This is
-# written to the cli.rb file using `>` redirection.
+# `Nh` class definition down to the second `EOF` line). This is
+# written to the nh.rb file using `>` redirection.
 
-# The `${0%/*}/../../Formula/cli.rb` part finds the cli.rb
+# The `${0%/*}/../../Formula/nh.rb` part finds the cli.rb
 # file relative to this update-formula file itself. `${0%/*}` is bash
 # parameter expansion which deletes the first occurrence of `/*` (i.e.
 # everything after the last slash) from the value of `$0`. Then we just use
 # standard relative paths to go up 2 directories.
-cat <<EOF > "${0%/*}/../../Formula/cli.rb"
-class Cli < Formula
+cat <<EOF > "${0%/*}/../../Formula/nh.rb"
+class Nh < Formula
   desc "Command-line interface for the NervesHub platform"
   homepage "https://github.com/nerves-hub/nerves_hub_cli"
 
