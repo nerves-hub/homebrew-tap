@@ -1,0 +1,24 @@
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version"
+        required: true
+        type: string
+
+jobs:
+  update-formula:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update formula
+        run: |
+          mkdir -p Formula
+
+          VERSION='${{ github.event.inputs.version }}' ./.github/scripts/update-formula
+
+          git config --global user.name 'Josh Kalderimis'
+          git config --global user.email 'josh.kalderimis@gmail.com'
+          git add Formula/cli.rb
+          git commit -m 'Updated cli to ${{ github.event.inputs.version }}'
+          git push origin master
