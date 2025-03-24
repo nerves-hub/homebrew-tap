@@ -21,4 +21,4 @@ jobs:
           git config --global user.email 'josh.kalderimis@gmail.com'
           git add Formula/nh.rb
           git commit -m 'Updated cli to ${{ github.event.inputs.version }}'
-          git push origin master
+          git push origin main
