@@ -2,14 +2,14 @@ class Nh < Formula
   desc "Command-line interface for the NervesHub platform"
   homepage "https://github.com/nerves-hub/nerves_hub_cli"
 
-  version "3.0.0"
+  version "3.1.0"
 
   base_download_url = "https://github.com/nerves-hub/nerves_hub_cli/releases/download/v#{version}"
 
-  macos_x86_64_sha = "0afbae55145c6f475158291f8502aa203945431108358cc5ded1013c111105c8"
-  macos_aarch64_sha = "002302f852fb1b20332b84bdfa989ee9eef23463a5e780d34e7687cd170b8131"
-  linux_x86_64_sha = "0d2192641c66467b222585112fddf185649789fa58b2e8c907a1acb42b2bd315"
-  linux_aarch64_sha = "d8a6090cd2c29546c02bdcddb822e148e562d12594e734b3ccb46f122b598f8d"
+  macos_x86_64_sha = "e7b1ed51ef01b8d71a2e2444078980bb68acfa56a5e5958f726e55f453f00c6d"
+  macos_aarch64_sha = "36b0356f2b78eb6435555e21ee6c354ef4b6e63234b33f830a4b3c700bf0473a"
+  linux_x86_64_sha = "1662c4a72aa55c339e083f7a30fb35235f58c1f31ee1af33791226961bb26396"
+  linux_aarch64_sha = "d20d4e4cf2762b879fafb285fdf948b694f84b2b810048c5eaacd35aef33b784"
 
   if OS.mac? && Hardware::CPU.intel?
     url "#{base_download_url}/macos-x86_64.tar.xz"
